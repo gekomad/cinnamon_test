@@ -103,7 +103,7 @@
     echo "stop_cute exists. Exit!"
     exit 0
   fi
-  export test_dir="/home/geko/cinnamon_test"  
+  export test_dir="/home/geko/cinnamon_test/test"  
   clone_dir="/home/geko/cinnamon_test/$project_name"
 
   array=($IPS)
