@@ -122,8 +122,7 @@ aa=$(ifconfig $(route -n | grep ^0.0.0.0 | awk '{print $NF}') | grep inet | grep
 PS1="$aa <$id2> ($mac) $PS1"
 
 alias pss="/home/geko/remote/pss" 
-alias b="/home/geko/remote/b;echo \"grep warning..\";/home/geko/remote/bash.sh \"grep arning /tmp/cute*log\""
-alias bb="time /home/geko/remote/bb;echo \"grep warning..\";/home/geko/remote/bash.sh \"grep arning /tmp/cute*log\""
+alias b="/home/geko/b;echo \"grep warning..\";/home/geko/remote/bash.sh \"grep arning /tmp/cute*log\""
 alias l="ls -ltr"
 alias branch='git branch -a'
 alias commit="git commit -m '.'"
