@@ -15,7 +15,7 @@ do
     sleep 2
 done
 rm /tmp/cute_pgn/*.ok
-./scp_get_async.sh "/tmp/{cute_pgn_??????.tar,cute_pgn_??????.ok}" /tmp/cute_pgn
+scp_get_async.sh "/tmp/{cute_pgn_??????.tar,cute_pgn_??????.ok}" /tmp/cute_pgn
 c=0
 until [[ $c == $count ]]
 do
