@@ -18,8 +18,6 @@ fi
 for ip in "${array[@]}"
 do
 	echo "ssh geko@$ip "$1""
-	#nohup timeout 6h ssh geko@$ip "$1" >/dev/null 2>/dev/null &
 	nohup ssh geko@$ip "$1" >/dev/null 2>/dev/null &
-	#nohup ssh geko@$ip "$1"  &
 done
 exit 0

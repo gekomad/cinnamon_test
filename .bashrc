@@ -118,7 +118,7 @@ ea797f)
   ;;
 esac
 
-. cute_main_param
+. ~/cute_main_param
 export set EDITOR=vi
 export HISTCONTROL="erasedups:ignoreboth"
 PATH=./:$PATH

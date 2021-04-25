@@ -8,7 +8,6 @@ array=( $IPS )
 for ip in "${array[@]}"
 do
 	echo "--------------------------- ssh geko@$ip "$1"------------------------"
-	#nohup ssh geko@$ip "$1" &
 	ssh geko@$ip "$1"
 	echo
 done
