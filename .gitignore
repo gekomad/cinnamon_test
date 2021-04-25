@@ -1,1 +1,11 @@
 /cinnamon_test
+.bash_history
+.bash_logout
+.bashrc_old
+.cache/
+.gitconfig
+.profile
+.ssh/
+.sudo_as_admin_successful
+/auriga_root/
+/syzygy/
