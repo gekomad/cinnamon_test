@@ -98,6 +98,7 @@
   }
 
 ########### main ###############
+  . ~/.bashrc
   . ~/cute_main_param
   if [ -f ~/STOP_CUTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE ]; then
     echo "stop_cute exists. Exit!"

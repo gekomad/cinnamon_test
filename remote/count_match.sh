@@ -1,1 +1,1 @@
-./bash.sh ./count_match.sh
+bash.sh ~/util/count_match.sh

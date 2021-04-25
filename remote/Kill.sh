@@ -1,3 +1,3 @@
 rm /tmp/.cutelock
-./bash_async.sh "/home/geko/Kill.sh"
+bash_async.sh "/home/geko/Kill.sh"
 

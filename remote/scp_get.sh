@@ -1,3 +1,4 @@
+. ~/cute_main_param
 array=( $IPS )
 
 for ip in "${array[@]}"

@@ -1,6 +1,6 @@
 echo "ping..."
 . ~/cute_main_param
-/home/geko/remote/ping.sh
+ping.sh
 count=$?
 array=( $IPS )
 tot="${#array[@]}"
