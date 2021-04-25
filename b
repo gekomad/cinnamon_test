@@ -6,7 +6,7 @@ count=$?
 killall scp 2>/dev/null
 rm -fr /tmp/cute_pgn
 . ~/cute_main_param
-bash_async.sh ". ~/cute_main_param;rm -fr /tmp/cute_pgn;mkdir /tmp/cute_pgn;find /home/geko/cinnamon_test -type d -name ".git" -prune -o  -name "*.pgn"  -exec cp {} /tmp/cute_pgn \;; tar -cf /tmp/cute_pgn_\$id.tar /tmp/cute_pgn 2>/dev/null && touch /tmp/cute_pgn_\$id.ok" 
+bash_async.sh ". ~/cute_main_param;rm -fr /tmp/cute_pgn;mkdir /tmp/cute_pgn;find /home/geko/cinnamon_test -type d -name ".git" -prune -o  -name "*.pgn"  -exec cp {} /tmp/cute_pgn \;; tar -cf /tmp/cute_pgn_\$id.tar /tmp/cute_pgn 2>/dev/null && touch /tmp/cute_pgn_\$id.ok"  ignore_err
 mkdir /tmp/cute_pgn 2>/dev/null
 sleep 3
 scp_get_async.sh "/tmp/cute_pgn_??????.ok" /tmp/cute_pgn 
