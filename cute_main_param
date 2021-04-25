@@ -1,0 +1,18 @@
+export IPS="192.168.1.105 192.168.1.106 192.168.1.114 192.168.1.115 192.168.1.116 192.168.1.117 192.168.1.118 192.168.1.119 192.168.1.120"
+
+export ARCH="$(uname -i)"
+export project_name=cinnamon
+export repo=https://github.com/gekomad/$project_name.git
+export first="/home/geko/engines/$ARCH/cinnamon234 proto=uci"
+export first_elo="2212"
+export first_uci_name="Cinnamon 2.3.4"
+export second_param=
+export opening_epd=/home/geko/epd/crafty.epd
+export id=$(cat /sys/class/net/*/address|sort|md5sum |cut -c1-6)
+export resign="-resign movecount=6 score=1000"
+export write_log=0
+#export tc="0/15:0+0.5"
+export tc="0/0:15+0.5"
+export TOT_MATCH=20000
+export concurrency=4
+

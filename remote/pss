@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. ~/cute_main_param
+/home/geko/remote/bash.sh "w|grep load |awk -F 'users' '{print $2}' " 
+echo
+exit 0
+
