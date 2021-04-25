@@ -6,6 +6,11 @@
   function git_pull() {
     echo "START git_pull SCRIPT $clone_dir $repo"
 
+    cd $test_dir
+    for d in */; do
+      touch $d/terminated
+    done
+
     if [ ! -d $clone_dir ]; then
       cd /home/geko/cinnamon_test
       git clone $repo
@@ -26,7 +31,8 @@
     branch_name=$1
     printf "branch: $branch_name"
     if [ -d "$test_dir/$branch_name" ]; then
-      printf " exists!\n"     
+      printf " exists!\n"
+      rm $test_dir/$branch_name/terminated 2>/dev/null
       return 0
     fi
 
@@ -99,6 +105,7 @@
   fi
   export test_dir="/home/geko/cinnamon_test"  
   clone_dir="/home/geko/cinnamon_test/$project_name"
+
   array=($IPS)
   n_server="${#array[@]}"
   killall -s 9 cutechess-cli cc1plus cinnamon cinnamon20 2>/dev/null
