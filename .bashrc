@@ -34,7 +34,6 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 unset color_prompt force_color_prompt
-export CINNAMON_HOME="/home/geko"
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\] $PS1"
