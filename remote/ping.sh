@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-. /home/geko/cute_main_param
+. ~/cute_main_param
 array=( $IPS )
 let count=0
 for ip in "${array[@]}"
