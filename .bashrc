@@ -62,9 +62,26 @@ if ! shopt -oq posix; then
   fi
 fi
 ################
-
 mac=$(cat /sys/class/net/*/address|sort|md5sum |cut -c1-6)
 case $mac in
+c491f8)
+  id2="1"
+  ;;
+999bd5)
+  id2="3"
+  ;;
+1f2bde)
+  id2="4"
+  ;;
+046a1b)
+  id2="7"
+  ;;
+860b0e)
+  id2="5"
+  ;;
+79a5ed)
+  id2="8"
+  ;;
 12387e)
   id2="9"
   ;;
