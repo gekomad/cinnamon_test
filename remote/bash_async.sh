@@ -10,7 +10,7 @@ count=$?
 array=( $IPS )
 tot="${#array[@]}"
 if [[ $count -ne $tot ]]; then
-	echo "ping error"
+	echo "ping error ************* no changes made ***************"
     if [ "" ==	 "$2" ] ; then
     	exit 1
     fi
