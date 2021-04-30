@@ -71,13 +71,19 @@
     . ~/cute_main_param
     # override main cute_main_param
     . cute_main_param
-    
+
     current_games=$(grep Result $pgn_file | grep -v -c "*")
     if [ $current_games -ge $(($TOT_MATCH / $n_server)) ]; then
       echo "Played $current_games matches (>= $TOT_MATCH/$n_server). Exit from MATCH script"
       return
     fi
     missing_games=50 #$((($TOT_MATCH/$n_server-$current_games)/2))
+
+    if [ $ARCH == "armv7l" ]; then
+      tc=$tc32
+    else
+      tc=$tc64
+    fi
 
     if [ $missing_games -ne 0 ]; then
       second=/home/geko/cinnamon_test/test/$dir/$project_name/src/cinnamon
@@ -97,14 +103,14 @@
     echo "END MATCH SCRIPT"
   }
 
-########### main ################
+  ########### main ################
   . ~/.bashrc
   . ~/cute_main_param
   if [ -f ~/STOP_CUTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE ]; then
     echo "stop_cute exists. Exit!"
     exit 0
   fi
-  export test_dir="/home/geko/cinnamon_test/test"  
+  export test_dir="/home/geko/cinnamon_test/test"
   clone_dir="/home/geko/cinnamon_test/$project_name"
 
   array=($IPS)
@@ -117,5 +123,3 @@
     match $d
   done
 ) 200>/tmp/.cutelock
-
-
