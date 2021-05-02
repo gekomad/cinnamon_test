@@ -19,9 +19,9 @@ mkdir /tmp/cute_pgn 2>/dev/null
 sleep 3
 scp_get_async.sh "/tmp/cute_pgn_??????.ok" /tmp/cute_pgn
 while [[ $(find /tmp/cute_pgn -type f -name 'cute_pgn_??????.ok' -printf x | wc -c) != $count ]]; do
-print 4
+    print 4
 done
-        rm /tmp/cute_pgn/*.ok
+rm /tmp/cute_pgn/*.ok
 scp_get_async.sh "/tmp/{cute_pgn_??????.tar,cute_pgn_??????.ok}" /tmp/cute_pgn
 c=0
 until [[ $c == $count ]]; do
@@ -73,7 +73,6 @@ else
     grep -v "^White" /tmp/$fn.txt | grep -v "^Draw"
   done
 fi
-rm nohup 2>/dev/null
-#cat /tmp/res1
+
 date
 exit 0

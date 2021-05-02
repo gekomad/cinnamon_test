@@ -114,7 +114,7 @@
 
   array=($IPS)
   n_server="${#array[@]}"
-  killall -s 9 cutechess-cli cc1plus cinnamon cinnamon20 2>/dev/null
+  killall -s 9 cutechess-cli cc1plus cinnamon 2>/dev/null
   mkdir -p $test_dir 2>/dev/null
   git_pull
   cd $test_dir
