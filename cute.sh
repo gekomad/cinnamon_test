@@ -79,7 +79,7 @@
     fi
     missing_games=50 #$((($TOT_MATCH/$n_server-$current_games)/2))
 
-    if [ $ARCH == "armv7l" ]; then
+    if [ "$(getconf LONG_BIT)" == "32" ]; then
       tc=$tc32
     else
       tc=$tc64
@@ -89,8 +89,7 @@
       second=/home/geko/cinnamon_test/test/$dir/$project_name/src/cinnamon
       killall -s9 cutechess-cli 2>/dev/null
 
-      parameters="-openings file=$opening_epd format=epd -engine cmd=$first $first_param -engine cmd=$second $second_param -each proto=uci tc=$tc -repeat -tournament gauntlet -pgnout $pgn_file -concurrency $concurrency -recover -rounds 2 
--games $missing_games -draw movenumber=100 movecount=60 score=0 $resign"
+      parameters="-openings file=$opening_epd format=epd -engine cmd=$first $first_param -engine cmd=$second $second_param -each proto=uci tc=$tc -repeat -tournament gauntlet -pgnout $pgn_file -concurrency $concurrency -recover -rounds 2 -games $missing_games -draw movenumber=100 movecount=60 score=0 $resign"
 
       echo "cutechess-cli $parameters"
       if [ $write_log -eq 1 ]; then
