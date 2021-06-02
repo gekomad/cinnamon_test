@@ -2,7 +2,7 @@ export IPS="192.168.1.226 192.168.1.147 192.168.1.126 192.168.1.231 192.168.1.11
 export ARCH="$(uname -i)"
 export project_name=cinnamon
 export repo=https://github.com/gekomad/$project_name.git
-export first="/home/geko/engines/$ARCH/cinnamon24 proto=uci"
+export first="/home/geko/engines/$ARCH/cinnamon24"
 export first_elo="2386"
 export first_uci_name="Cinnamon 2.4"
 export second_param=
@@ -14,3 +14,4 @@ export tc64="0/0:15+0.5"
 export tc32="0/0:30+0.9"
 export TOT_MATCH=20000
 export concurrency=4
+
