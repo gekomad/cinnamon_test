@@ -4,7 +4,6 @@ export project_name=cinnamon
 export repo=https://github.com/gekomad/$project_name.git
 export first="/home/geko/engines/$ARCH/cinnamon24"
 export first_elo="2386"
-export first_uci_name="Cinnamon 2.4"
 export second_param=
 export opening_epd=/home/geko/epd/crafty.epd
 export id=$(cat /sys/class/net/*/address|sort|md5sum |cut -c1-6)
