@@ -41,7 +41,7 @@ rm /tmp/cute_pgn/* 2>/dev/null
 cd /tmp/cute_pgn/tmp/cute_pgn
 rm /tmp/res1 2>/dev/null
 a=$(find ./ -type f -size +40c -printf "%f\n" | grep "\.pgn" | rev | cut -f2,3,4,5,6,7,8,9,10 -d"-" | rev | sort -u)
-first_uci_name=$(echo "uci" > /tmp/uciname;echo "quit" >> /tmp/uciname; $first < /tmp/uciname|grep "^id name"|cut -c9-50)
+
 if true ; then
   for fn in $a; do
     echo " ----------- _test_/$fn ------------ "

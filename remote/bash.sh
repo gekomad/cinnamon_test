@@ -8,7 +8,7 @@ array=( $IPS )
 for ip in "${array[@]}"
 do
 	echo "--------------------------- ssh geko@$ip "$1"------------------------"
-	ssh -oStrictHostKeyChecking=no geko@$ip "$1"
+	ssh geko@$ip "$1"
 	echo
 done
 exit 0
