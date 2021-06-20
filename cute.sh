@@ -81,15 +81,17 @@
 
     if [ "$(getconf LONG_BIT)" == "32" ]; then
       tc=$tc32
+      hash_size=64
     else
       tc=$tc64
+      hash_size=256
     fi
 
     if [ $missing_games -ne 0 ]; then
       second=/home/geko/cinnamon_test/test/$dir/$project_name/src/cinnamon
       killall -s9 cutechess-cli 2>/dev/null
 
-      parameters="-openings file=$opening_epd format=epd -engine cmd=$first $first_param -engine cmd=$second $second_param -each proto=uci tc=$tc -repeat -tournament gauntlet -pgnout $pgn_file -concurrency $concurrency -recover -rounds 2 -games $missing_games -draw movenumber=100 movecount=60 score=0 $resign"
+      parameters="-openings file=$opening_epd format=epd -engine cmd=$first $first_param -engine cmd=$second $second_param -each option.Hash=$hash_size proto=uci tc=$tc -repeat -tournament gauntlet -pgnout $pgn_file -concurrency $concurrency -recover -rounds 2 -games $missing_games -draw movenumber=100 movecount=60 score=0 $resign"
 
       echo "cutechess-cli $parameters"
       if [ $write_log -eq 1 ]; then

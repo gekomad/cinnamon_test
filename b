@@ -38,7 +38,7 @@ rm /tmp/cute_pgn/* 2>/dev/null
 cd /tmp/cute_pgn/tmp/cute_pgn
 rm /tmp/res1 2>/dev/null
 a=$(find ./ -type f -size +40c -printf "%f\n" | grep "\.pgn" | rev | cut -f2,3,4,5,6,7,8,9,10 -d"-" | rev | sort -u)
-if true ; then
+if false ; then
   for fn in $a; do
     echo " ----------- _test_/$fn ------------ "
     echo "32bit"
