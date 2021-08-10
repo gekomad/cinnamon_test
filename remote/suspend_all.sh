@@ -1,4 +1,4 @@
-bash_async.sh "for d in /home/geko/cinnamon_test/test/*/ ; do touch \$d/suspend ;done"
+bash_async.sh /home/geko/workspace/cinnamon_test/remote/suspend_all_local.sh"
 
 exit 0
 
