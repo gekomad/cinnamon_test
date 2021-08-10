@@ -29,6 +29,6 @@ export resign="-resign movecount=6 score=1000"
 export write_log=0
 export tc64="0/0:60+1.0"
 export tc32="0/0:60+1.0"
-export TOT_MATCH=8000
+export TOT_MATCH=20000
 export concurrency=4
 
