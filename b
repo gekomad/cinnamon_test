@@ -68,7 +68,7 @@ else
     #pgn-extract -Tr1-0 a >>b 2>/dev/null
     #pgn-extract -Tr1/2-1/2 a >>b 2>/dev/null
     #mv b a
-    ordo -a $first_elo -p a -A "$first_uci_name" -o /tmp/$fn.txt >/dev/null
+    ordo -N2 -a $first_elo -p a -A "$first_uci_name" -o /tmp/$fn.txt >/dev/null
     grep -v "^White" /tmp/$fn.txt | grep -v "^Draw"
   done
 fi
